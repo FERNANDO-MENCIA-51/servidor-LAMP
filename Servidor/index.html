@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+
+        <figure class="main_figure">
+            <img src="./img/Logo-VG_Tpt02.png" class="main_img">
+        </figure>
+
+        <div class="main_contact">
+            <h2 class="main_title">BIENVENIDOS</h2>        
+
+        <form class="main_form">
+
+            <div class="container">
+                <input type="radio" id="sitemas" name="os">
+                <label for="sitemas">Análisis de sistema</label> 
+
+                <input type="radio" id="agraria" name="os">
+                <label for="agraria">Producción Agraria</label> 
+
+            </div>
+
+            <input type="text" placeholder="Nombre completo" class="main_input">
+            <input type="text" placeholder="Apellidos" class="main_input">
+            <input type="number" placeholder="Edad" class="main_input">
+            <input type="text" placeholder="correo" class="main_input">
+            <input type="password" placeholder="contraseña" class="main_input">
+            <a href="#">¿Olvidó su contraseña?</a>   
+
+            <section>
+                <input type="checkbox" id="check">
+                <label for="check">Aceptar la política de privacidad de los Términos y condiciones.</label>
+            </section>
+            <input type="submit" value="REGISTRARME" class="main_input main_input_send">
+        </form>
+
+        <p class="main_paragranph">¿Ya tienes una cuenta? Inicia sesión</p>
+        <div class="line-container">
+            <div class="line"></div>
+            <div class="circle">Con</div>
+            <div class="line"></div>
+        </div>
+
+        <article class="main_social">
+            <a href="#" class="main_link">
+                <img src="/img/facebook.png" class="main_icon">
+            </a>
+            <a href="#" class="main_link">
+                <img src="/img/github.png" class="main_icon">
+            </a>
+            <a href="#" class="main_link">
+                <img src="/img/google.png" class="main_icon">
+            </a>
+
+
+
+        </article>
+    </div>
+    </section>
+
+    <style>
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 80px 0;
+    background-image: url("/img/2.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.main {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.479);
+    overflow: hidden;
+    padding: .7em;
+    border-radius: 1em;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    animation: fadeIn 1s ease; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main_img {
+    margin: auto;
+    padding-top: 120px;
+    width: 100%;
+    height: 75%;
+}
+
+.main_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 3em .7em;
+    text-align: center;
+}
+
+.main_title {
+    font-size: 2.3rem;
+    color: #000000;
+}
+
+.main_paragraph {
+    margin: .3em 0;
+    color: #000000;
+}
+
+.main_form {
+    display: grid;
+    justify-items: center;
+    gap: 1.5em;
+}
+
+.container {
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.container input[type="radio"] {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.container input[type="radio"]:checked {
+    transform: scale(1.1);
+}
+
+.container label {
+    transition: color 0.3s ease;
+}
+
+.container input[type="radio"]:checked + label {
+    color: #1c03f7;
+    font-weight: bold;
+}
+
+
+.main_input {
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid transparent;
+    padding: 1em;
+    font: inherit;
+    border-radius: .6em;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main_input:focus {
+    background-color: #f0f8ff;
+    border-color: #00aaff;
+    box-shadow: 0px 0px 10px rgba(0, 170, 255, 0.5);
+}
+
+.main_input_send {
+    background-color: #ee1400;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.main_input_send:hover {
+    background-color: #ff4500;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(255, 69, 0, 0.3); 
+}
+
+.main_input:hover {
+    background-color: #fff;
+    color: #234404;
+    border: 2px solid #00aaff;
+}
+
+#check {
+    margin-right: 10px;
+}
+
+
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    opacity: 0;
+    animation: slideIn 1.5s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.circle {
+    padding: 0 10px;
+    font-size: 24px;
+}
+
+
+.main_social {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+
+.main_icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main_link {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: .6em 1.5em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main_link:hover {
+    background-color: #fff;
+    transform: scale(1.1); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.main_icon:hover {
+    transform: rotate(360deg); 
+    box-shadow: 0px 5px 10px rgba(0, 170, 255, 0.5);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main {
+    animation: bounceIn 0.8s ease; 
+}
+
+    </style>
+</body>
+</html>
